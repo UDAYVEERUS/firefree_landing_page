@@ -22,8 +22,14 @@
 
         /* brands logo section css */
         .logo-section {
+
             padding: 20px 0;
             text-align: center;
+        }
+
+        .logo-section .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
 
         .company-logo {
@@ -135,6 +141,7 @@
 
         .copyright p {
             margin-bottom: 0px;
+            font-size: 14px;
         }
 
         .diagonal-section-first,
@@ -151,6 +158,48 @@
             text-align: center;
         }
 
+        /* product features section start */
+        .image-col {
+            padding: 20px;
+            transition: background-color 0.3s ease;
+            /* Smooth transition */
+            text-align: center;
+            align-items: center;
+        }
+
+        .image-text-1 {
+            padding: 20px;
+            border-radius: 20px;
+            transition: 0.5s all;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        }
+
+        .image-text-1:hover {
+            background-color: #CD2122;
+            transition: background-color 0.3s ease;
+            color: white;
+            /* Change background color on hover */
+        }
+
+        .image-text-3 {
+            background-color: #CD2122;
+            /* Set background color for the middle column */
+        }
+
+        /* product features section end */
+
+
+        /* contact section css */
+        .row.contact-section .col-md-4 {
+            display: flex;
+            justify-content: end;
+        }
+
+        .row.contact-section {
+            align-items: center;
+        }
+
         @media only screen and (min-width: 320px) and (max-width: 768px) {
             .row.boxes {
                 margin: 0;
@@ -160,6 +209,19 @@
             .first-diagonal {
                 margin-bottom: 10px;
                 text-align: center;
+            }
+
+            .row.contact-section .col-md-4 {
+                display: block;
+            }
+
+            .row.contact-section {
+                text-align: center;
+            }
+
+            .row.product-feature-section {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             }
         }
     </style>
@@ -213,23 +275,23 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid logo-section">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="./assets/logo-1.webp" alt="Company 1" class="company-logo">
-                    <img src="./assets/logo-2.svg" alt="Company 2" class="company-logo">
-                    <img src="./assets/logo-3.webp" alt="Company 3" class="company-logo">
-                    <img src="./assets/logo-4.webp" alt="Company 1" class="company-logo">
-                    <img src="./assets/logo-5.webp" alt="Company 2" class="company-logo">
-                    <img src="./assets/logo-6.webp" alt="Company 3" class="company-logo">
-                    <img src="./assets/logo-7.webp" alt="Company 1" class="company-logo">
-                    <img src="./assets/logo-8.webp" alt="Company 2" class="company-logo">
-                    <img src="./assets/logo-9.svg" alt="Company 3" class="company-logo">
-                    <!-- Add more images for other companies -->
-                </div>
+    <div class="container-fluid logo-section" style="overflow-x: hidden;">
+
+        <div class="row">
+            <div class="col">
+                <img src="./assets/logo-1.webp" alt="Company 1" class="company-logo">
+                <img src="./assets/logo-2.svg" alt="Company 2" class="company-logo">
+                <img src="./assets/logo-3.webp" alt="Company 3" class="company-logo">
+                <img src="./assets/logo-4.webp" alt="Company 1" class="company-logo">
+                <img src="./assets/logo-5.webp" alt="Company 2" class="company-logo">
+                <img src="./assets/logo-6.webp" alt="Company 3" class="company-logo">
+                <img src="./assets/logo-7.webp" alt="Company 1" class="company-logo">
+                <img src="./assets/logo-8.webp" alt="Company 2" class="company-logo">
+                <img src="./assets/logo-9.svg" alt="Company 3" class="company-logo">
+                <!-- Add more images for other companies -->
             </div>
         </div>
+
     </div>
     <!-- fisrt diagonal section start-->
     <div class="container-fluid section diagonal-section-first">
@@ -358,6 +420,72 @@
         </div>
     </div>
     <!-- Third diagonal section end-->
+
+    <!-- firefree product features section start-->
+    <div class="container">
+        <div class="row product-feature-section">
+            <div class="col-md-2 image-col">
+                <div class="image-text-1">
+                    <img src="./assets/logo-1.webp" class="img-fluid" alt="Image 1">
+                    <p>Image 1 Text</p>
+                </div>
+            </div>
+            <div class="col-md-2 image-col">
+                <div class="image-text-1">
+                    <img src="./assets/logo-1.webp" class="img-fluid" alt="Image 2">
+                    <p>Image 2 Text</p>
+                </div>
+            </div>
+            <div class="col-md-2 image-col">
+                <div class="image-text-1">
+                    <img src="./assets/logo-3.webp" class="img-fluid" alt="Image 3">
+                    <p>Image 3 Text</p>
+                </div>
+            </div>
+            <div class="col-md-2 image-col">
+                <div class="image-text-1">
+                    <img src="./assets/logo-4.webp" class="img-fluid" alt="Image 4">
+                    <p>Image 4 Text</p>
+                </div>
+            </div>
+            <div class="col-md-2 image-col">
+                <div class="image-text-1">
+                    <img src="./assets/logo-5.webp" class="img-fluid" alt="Image 5">
+                    <p>Image 5 Text</p>
+                </div>
+            </div>
+            <div class="col-md-2 image-col">
+                <div class="image-text-1">
+                    <img src="./assets/logo-5.webp" class="img-fluid" alt="Image 6">
+                    <p>Image 6 Text</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- firefree product features section end-->
+
+    <!-- contact section start -->
+    <div class="container-fluid section contact-section-main" style="background-color: #CD2122;">
+        <div class="container">
+            <div class="row contact-section" style="padding: 20px; color: white;">
+                <div class="col-md-8">
+                    <div class="left-content">
+                        <h4>CONTACT FIREFREE AND ORDER TODAY</h4>
+                        <p>For ordering or information regarding our Fire Resistant, Fire Retardant Products call us at
+                            1-888-990-3388</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="right-content">
+                        <button type="button" class="btn"
+                            style="background-color: #CD2122; color: white; border: 3px solid white;">how to
+                            order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact section end -->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog">
             <div class="modal-content">
