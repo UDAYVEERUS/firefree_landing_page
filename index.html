@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Section</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 100px;
+            height: 50px;
+        }
+
+        /* brands logo section css */
+        .logo-section {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .company-logo {
+            max-width: 100px;
+            margin: 0 10px;
+        }
+
+        /* brands logo section css */
+        .hero-section {
+            background-image: url('./assets/banner.webp');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .section-heading {
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            margin-bottom: 15px;
+        }
+
+        /* diagonal section css */
+        .boxes {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .row.boxes .col-md-3.box-1,
+        .box-2,
+        .box-3,
+        .box-4 {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        .row.boxes {
+            gap: 10px;
+            width: 100%;
+            max-width: 100%;
+            margin-top: 20px;
+
+        }
+
+        .boxes .box-link {
+            text-decoration: none;
+            color: black;
+        }
+
+        .row.boxes .col-md-3 {
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: rgba(58, 55, 55, 0.15) 1.95px 1.95px 2.6px;
+            background-color: #CD2122;
+
+        }
+
+        .col-md-3,
+        .box-1,
+        .box-2,
+        .box-3,
+        .box-4 {
+            text-align: center;
+        }
+
+        .col-md-3 .box-link {
+            color: white;
+        }
+
+        .diagonal-section-first {
+            margin-top: 15px;
+        }
+
+        .diagonal-section-second {
+            margin-top: 15px;
+        }
+
+        .diagonal-section-third {
+            margin-top: 15px;
+        }
+
+        .row.first-section-diagonal {
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        button.btn.btn-danger.para-button {
+            padding: 10px 30px 10px 30px;
+            background-color: #CD2122;
+        }
+
+        .row.first-section-diagonal img {
+            border-radius: 20px;
+        }
+
+        .copyright {
+            background-color: #f8f9fa;
+            text-align: center;
+
+        }
+
+        .copyright p {
+            margin-bottom: 0px;
+        }
+
+        .diagonal-section-first,
+        .diagonal-section-second,
+        .diagonal-section-third {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 20px;
+        }
+
+        form button.btn.btn-primary {
+            padding: 10px 30px 10px 30px;
+            background-color: #CD2122;
+            border: none;
+            text-align: center;
+        }
+
+        @media only screen and (min-width: 320px) and (max-width: 768px) {
+            .row.boxes {
+                margin: 0;
+                margin-top: 20px;
+            }
+
+            .first-diagonal {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid bg-dark header-section">
+        <div class="header container">
+            <div>
+                <img src="./assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div>
+                <button class="btn btn-danger mr-2">Call Now</button>
+                <button class="btn btn-danger">Call Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Welcome to Our Website</h1>
+                    <p>This is a sample hero section with a background banner. You can add some brief text or
+                        description
+                        here.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-container">
+                        <h3 style="text-align: center;">Contact Us</h3>
+                        <form onsubmit="emailSend(); reset(); return false;">
+                            <div class="form-group">
+                                <input type="text" id="name" class="form-control" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" class="form-control" name="phone"
+                                    placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="message" rows="3" name="message"
+                                    placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid logo-section">
+        <div class="row">
+            <div class="col">
+                <img src="./assets/logo-1.webp" alt="Company 1" class="company-logo">
+                <img src="./assets/logo-2.svg" alt="Company 2" class="company-logo">
+                <img src="./assets/logo-3.webp" alt="Company 3" class="company-logo">
+                <img src="./assets/logo-4.webp" alt="Company 1" class="company-logo">
+                <img src="./assets/logo-5.webp" alt="Company 2" class="company-logo">
+                <img src="./assets/logo-6.webp" alt="Company 3" class="company-logo">
+                <img src="./assets/logo-7.webp" alt="Company 1" class="company-logo">
+                <img src="./assets/logo-8.webp" alt="Company 2" class="company-logo">
+                <img src="./assets/logo-9.svg" alt="Company 3" class="company-logo">
+                <!-- Add more images for other companies -->
+            </div>
+        </div>
+    </div>
+    <!-- fisrt diagonal section start-->
+    <div class="container-fluid section diagonal-section-first">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-heading">
+                    <h2>Similar Products</h2>
+                </div>
+            </div>
+            <div class="row first-section-diagonal">
+                <div class="col-md-6 first-diagonal">
+                    <h3>Firefree Wildfire System</h3>
+                    <p>The Firefree Wildfire System is the first and only intumescent exterior coating system that meets
+                        all the fire and weatherization ASTM standards for application in the Wildland Urban Interface
+                        listed fire zones, as prescribed in the California Building Code Section 704A.</p>
+                    <button style="margin-bottom: 10px;" class="btn btn-danger para-button">Call Now</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="./assets/image-1.png" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row boxes">
+                <div class="col-md-3 box-1">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+                <div class="col-md-3 box-2">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+                <div class="col-md-3 box-3">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+                <div class="col-md-3 box-4">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fisrt diagonal section end-->
+
+    <!-- Second diagonal section start-->
+    <div class="container-fluid section diagonal-section-second">
+        <div class="container">
+            <div class="row first-section-diagonal">
+                <div class="col-md-6">
+                    <img src="./assets/image-1.png" alt="Image" class="img-fluid">
+                </div>
+                <div class="col-md-6 first-diagonal">
+                    <h3 style="margin-top: 20px;">Firefree Wildfire System</h3>
+                    <p>The Firefree Wildfire System is the first and only intumescent exterior coating system that meets
+                        all the fire and weatherization ASTM standards for application in the Wildland Urban Interface
+                        listed fire zones, as prescribed in the California Building Code Section 704A.</p>
+                    <button class="btn btn-danger para-button">Call Now</button>
+                </div>
+            </div>
+            <div class="row boxes">
+                <div class="col-md-3 box-1">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+                <div class="col-md-3 box-2">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+                <div class="col-md-3 box-3">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+                <div class="col-md-3 box-4">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- second diagonal section end-->
+
+    <!-- Third diagonal section start-->
+    <div class="container-fluid section diagonal-section-third">
+        <div class="container">
+            <div class="row first-section-diagonal">
+                <div class="col-md-6 first-diagonal">
+                    <h3>Firefree Wildfire System</h3>
+                    <p>The Firefree Wildfire System is the first and only intumescent exterior coating system that meets
+                        all the fire and weatherization ASTM standards for application in the Wildland Urban Interface
+                        listed fire zones, as prescribed in the California Building Code Section 704A.</p>
+                    <button style="margin-bottom: 10px;" class="btn btn-danger para-button">Call Now</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="./assets/image-1.png" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row boxes">
+                <div class="col-md-3 box-1">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+                <div class="col-md-3 box-2">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+                <div class="col-md-3 box-3">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+                <div class="col-md-3 box-4">
+                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
+                        paragraph. You can add some details or
+                        information here.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Third diagonal section end-->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Please Fill out the form</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number:</label>
+                            <input type="tel" class="form-control" id="mobile">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col ">
+                    <div class="copyright">
+                        <p>&copy; 2024 All rights reserved. Firefree Coatings, Inc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    // <!-- Bootstrap JS and dependencies (optional if you need JavaScript features) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function emailSend() {
+
+        var userName = document.getElementById('name').value;
+        var phone = document.getElementById('phone').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        var messageBody = "Name :" + userName +
+            "<br/> Phone :" + phone +
+            "<br/> Email :" + email +
+            "<br/> Message :" + message;
+        // console.log(messageBody,"here421")
+
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "udayveerus348566@gmail.com",
+            Password: "9D5F0B8DBEC2B30BB2C6F3BB86E87F69773A",
+            To: 'udayveer@rankingeek.com',
+            From: document.getElementById("email").value,
+            Subject: "This is the subject",
+            Body: messageBody
+        }).then(
+            message => {
+                if (message == 'OK') {
+                    swal("Secussful", "You clicked the button!", "success");
+                }
+                else {
+                    swal("Error", "You clicked the button!", "error");
+                }
+            }
+        );
+    }
+</script>
+
+</html>
