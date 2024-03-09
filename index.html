@@ -8,6 +8,94 @@
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        .roboto-thin {
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .roboto-light {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .roboto-regular {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .roboto-medium {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .roboto-bold {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .roboto-black {
+            font-family: "Roboto", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .roboto-thin-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .roboto-light-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .roboto-regular-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .roboto-medium-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .roboto-bold-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .roboto-black-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        *body {
+            font-family: "Roboto", sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Roboto", sans-serif;
+            font-weight: 600;
+        }
+
+
         .header {
             display: flex;
             justify-content: space-between;
@@ -16,8 +104,8 @@
         }
 
         .logo {
-            max-width: 100px;
-            height: 50px;
+            max-width: 100%;
+            width: 150px;
         }
 
         /* brands logo section css */
@@ -27,9 +115,9 @@
             text-align: center;
         }
 
-        .logo-section .row {
+        .logo-section .row .col {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         }
 
         .company-logo {
@@ -39,10 +127,14 @@
 
         /* brands logo section css */
         .hero-section {
-            background-image: url('./assets/banner.webp');
+            background-image: url('./asset/banner.webp');
             background-size: cover;
             color: white;
             padding: 100px 0;
+        }
+
+        .container-fluid.hero-section .row {
+            align-items: center;
         }
 
         .form-container {
@@ -55,23 +147,38 @@
             text-align: center;
         }
 
-        .section-heading h2 {
+        /* .section-heading h2 {
             margin-bottom: 15px;
-        }
+        } */
 
         /* diagonal section css */
         .boxes {
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .container-fluid.section.diagonal-section-second .row.boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .container-fluid.section.diagonal-section-third .row.boxes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
         }
 
         .row.boxes .col-md-3.box-1,
         .box-2,
         .box-3,
-        .box-4 {
+        .box-4,
+        .box5 {
             width: 100% !important;
             max-width: 100% !important;
+        }
+
+        .row {
+            margin: 0;
         }
 
         .row.boxes {
@@ -99,7 +206,8 @@
         .box-1,
         .box-2,
         .box-3,
-        .box-4 {
+        .box-4,
+        .box-5 {
             text-align: center;
         }
 
@@ -129,9 +237,9 @@
             background-color: #CD2122;
         }
 
-        .row.first-section-diagonal img {
+        /* .row.first-section-diagonal img {
             border-radius: 20px;
-        }
+        } */
 
         .copyright {
             background-color: #f8f9fa;
@@ -142,13 +250,6 @@
         .copyright p {
             margin-bottom: 0px;
             font-size: 14px;
-        }
-
-        .diagonal-section-first,
-        .diagonal-section-second,
-        .diagonal-section-third {
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-            padding: 20px;
         }
 
         form button.btn.btn-primary {
@@ -177,9 +278,13 @@
 
         .image-text-1:hover {
             background-color: #CD2122;
-            transition: background-color 0.3s ease;
+            transition: 0.5s ease;
             color: white;
             /* Change background color on hover */
+        }
+
+        .content-details {
+            margin-bottom: 10px;
         }
 
         .image-text-3 {
@@ -187,8 +292,29 @@
             /* Set background color for the middle column */
         }
 
+        .full-para {
+            padding: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 10px 0px;
+            margin: 20px 0px;
+            text-align: justify;
+            border-radius: 20px;
+        }
+
         /* product features section end */
 
+        .product-feature-section .col-md-2.image-col {
+            width: 100% !important;
+            max-width: 100% !important;
+            cursor: pointer;
+        }
+
+        .row.product-feature-section {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 10px;
+            margin: 20px 0px;
+
+        }
 
         /* contact section css */
         .row.contact-section .col-md-4 {
@@ -200,7 +326,127 @@
             align-items: center;
         }
 
+        h3+p {
+            text-align: justify;
+        }
+
+        .container-fluid.bg-dark.header-section {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        form .btn {
+            width: 100%;
+            margin: auto !important;
+            max-width: 250px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            border-radius: 50px;
+        }
+
+        .form-container h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .btn-group a {
+            color: #fff;
+        }
+
+        .btn-group a:hover {
+            text-decoration: none;
+        }
+
+        .header button.btn.btn-danger a {
+            color: #fff;
+        }
+
+        .header button.btn.btn-danger a:hover {
+            text-decoration: none !important;
+        }
+
+        .row.product-feature-section .image-col {
+            padding: 0px;
+        }
+
+        .row.product-feature-section .image-col img.img-fluid {
+            max-width: 60px;
+        }
+
+        .contact-section button.btn a {
+            color: #fff;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .contact-section button.btn a:hover {
+            text-decoration: none;
+        }
+
+        button.btn.btn-danger.mobile {
+            display: none;
+        }
+
+        .container-fluid.hero-section.mobile {
+            display: none;
+        }
+        .mobile-btn{
+            display: none;
+        }
         @media only screen and (min-width: 320px) and (max-width: 768px) {
+            .get-quote-btn{
+                display: none;
+            }
+            .container-fluid.hero-section.mobile {
+                display: block;
+            }
+
+            .container-fluid.hero-section.desktop {
+                display: none;
+            }
+            .mobile-btn{
+            display: block;
+        }
+            button.btn.btn-danger.mobile {
+                display: block;
+            }
+
+            button.btn.btn-danger.mr-2.desktop {
+                display: none;
+            }
+
+            .logo {
+                max-width: 100%;
+                width: 100px;
+            }
+
+            .container-fluid.section.diagonal-section-second .row.boxes {
+                display: block;
+            }
+
+            .container-fluid.section.diagonal-section-third .row.boxes {
+                display: block;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .row.product-feature-section {
+                display: block;
+            }
+
+            /* .btn-group {
+                display: block;
+            } */
+
+            .logo-section .col {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
             .row.boxes {
                 margin: 0;
                 margin-top: 20px;
@@ -219,9 +465,13 @@
                 text-align: center;
             }
 
+            .btn-phone {
+                display: none;
+            }
+
             .row.product-feature-section {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                grid-template-columns: repeat(3, 1fr);
             }
         }
     </style>
@@ -232,28 +482,73 @@
     <div class="container-fluid bg-dark header-section">
         <div class="header container">
             <div>
-                <img src="./assets/logo.png" alt="Logo" class="logo">
+                <img src="./asset/logo.png" alt="Logo" class="logo">
             </div>
             <div>
-                <button class="btn btn-danger mr-2">Call Now</button>
-                <button class="btn btn-danger">Call Now</button>
+                <button class="btn btn-danger mr-2 desktop"><img style="height: 23px; width: 23px;"
+                        src="./asset/phone-call.png" alt="" srcset=""> <a href="tel:1-888-990-3388"
+                        style="color: white;">1-888-990-3388</a></button>
+                <button class="btn btn-danger mobile"><a href="tel:1-888-990-3388"><img src="./asset/phone-call.png"
+                            style="height: 30px; width: 30px; margin-right: 10px;" alt="" srcset="">Call
+                        Now</a></button>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid hero-section">
+    <div class="container-fluid hero-section desktop" id="form_box">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h1>Welcome to Our Website</h1>
-                    <p>This is a sample hero section with a background banner. You can add some brief text or
-                        description
-                        here.</p>
+                <div class="col-md-8">
+                    <h1>High-Performance Fire Resistant Coatings</h1>
+                    <p>With decades of experience, we are the leading developer of long-lasting fire-resistant coatings.
+                        These paints, tested and compliant with LEED V4 standards, are engineered to efficiently stop
+                        the destruction of fire, smoke, and toxic gasses. We have 3 main coating products that ensure
+                        your safety in fire emergencies & safeguard vulnerable areas such as roofs, vents, siding,
+                        eaves, and other systems. Our coatings are certified and tested through various industry
+                        standards and comply with all applicable requirements.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="form-container">
-                        <h3 style="text-align: center;">Contact Us</h3>
-                        <form onsubmit="emailSend(); reset(); return false;">
+                        <h3 style="text-align: center;">Get in touch for a FREE quote</h3>
+                        <form action="mailto.php" method="post" reset()>
+                            <div class="form-group">
+                                <input type="text" id="name" class="form-control" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" class="form-control" name="phone"
+                                    placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="message" rows="3" name="message"
+                                    placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid hero-section mobile">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>High-Performance Fire Resistant Coatings</h1>
+                    <p>With decades of experience, we are the leading developer of long-lasting fire-resistant coatings.
+                        These paints, tested and compliant with LEED V4 standards, are engineered to efficiently <span
+                            id="form_box_mobile"></span>stop
+                        the destruction of fire, smoke, and toxic gasses. We have 3 main coating products that ensure
+                        your safety in fire emergencies & safeguard vulnerable areas such as roofs, vents, siding,
+                        eaves, and other systems. Our coatings are certified and tested through various industry
+                        standards and comply with all applicable requirements.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-container">
+                        <h3 style="text-align: center;">Get in touch for a FREE quote</h3>
+                        <form action="mailto.php" method="post">
                             <div class="form-group">
                                 <input type="text" id="name" class="form-control" name="name" placeholder="Name">
                             </div>
@@ -276,19 +571,20 @@
         </div>
     </div>
     <div class="container-fluid logo-section" style="overflow-x: hidden;">
-
-        <div class="row">
-            <div class="col">
-                <img src="./assets/logo-1.webp" alt="Company 1" class="company-logo">
-                <img src="./assets/logo-2.svg" alt="Company 2" class="company-logo">
-                <img src="./assets/logo-3.webp" alt="Company 3" class="company-logo">
-                <img src="./assets/logo-4.webp" alt="Company 1" class="company-logo">
-                <img src="./assets/logo-5.webp" alt="Company 2" class="company-logo">
-                <img src="./assets/logo-6.webp" alt="Company 3" class="company-logo">
-                <img src="./assets/logo-7.webp" alt="Company 1" class="company-logo">
-                <img src="./assets/logo-8.webp" alt="Company 2" class="company-logo">
-                <img src="./assets/logo-9.svg" alt="Company 3" class="company-logo">
-                <!-- Add more images for other companies -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="./asset/logo-1.webp" alt="Company 1" class="company-logo">
+                    <img src="./asset/logo-2.svg" alt="Company 2" class="company-logo">
+                    <img src="./asset/logo-3.webp" alt="Company 3" class="company-logo">
+                    <img src="./asset/logo-4.webp" alt="Company 1" class="company-logo">
+                    <img src="./asset/logo-5.webp" alt="Company 2" class="company-logo">
+                    <img src="./asset/logo-6.webp" alt="Company 3" class="company-logo">
+                    <img src="./asset/logo-7.webp" alt="Company 1" class="company-logo">
+                    <img src="./asset/logo-8.webp" alt="Company 2" class="company-logo">
+                    <img src="./asset/logo-9.svg" alt="Company 3" class="company-logo">
+                    <!-- Add more images for other companies -->
+                </div>
             </div>
         </div>
 
@@ -298,41 +594,75 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 section-heading">
-                    <h2>Similar Products</h2>
+                    <h2>Our Leading Fire-Resistant Products</h2>
                 </div>
             </div>
             <div class="row first-section-diagonal">
                 <div class="col-md-6 first-diagonal">
-                    <h3>Firefree Wildfire System</h3>
-                    <p>The Firefree Wildfire System is the first and only intumescent exterior coating system that meets
-                        all the fire and weatherization ASTM standards for application in the Wildland Urban Interface
-                        listed fire zones, as prescribed in the California Building Code Section 704A.</p>
-                    <button style="margin-bottom: 10px;" class="btn btn-danger para-button">Call Now</button>
+                    <h3>Firefree 88</h3>
+                    <p>Firefree 88 ("FF88") is our high-quality, intumescent fire-resistant paint. This non-toxic,
+                        thin-film, and water-based product is renowned for its exceptional fire-resistant capabilities,
+                        requiring only a thin layer of FF88. The fire resistance capabilities of these coatings are
+                        certified and fully tested with multiple standards worldwide.</p>
+                    <div class="btn-group" style="gap: 10px;">
+                        <button style="margin-bottom: 10px;" class="btn btn-danger para-button btn-phone"><img
+                                style="height: 23px; width: 23px;" src="./asset/phone-call.png" alt="" srcset=""> <a
+                                href="tel:1-888-990-3388" style="color: white;">1-888-990-3388</a>
+                        </button>
+                        <button style="margin-bottom: 10px;" class="btn btn-danger para-button get-quote-btn"><a href="#form_box">Get
+                                a free
+                                quote</a>
+                        </button>
+                        <button style="margin-bottom: 10px;" class="btn btn-danger para-button mobile-btn"><a
+                                href="#form_box_mobile">Get
+                                a free
+                                quote</a>
+                        </button>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="./assets/image-1.png" alt="Image" class="img-fluid">
+                    <img src="./asset/image-1.png" alt="Image" class="img-fluid">
                 </div>
             </div>
+            <p class="full-para">Tested to global standards such as ASTM, FM, NFPA, UBC, EN, and SISIR, our coatings
+                establish a fire barrier across various materials and assemblies. Our coating has also received official
+                approvals from FM Approvals, undergone inspections by ICC, obtained classification by UL, and
+                acknowledged by NY MEA. These certifications demonstrate the reliability of our fire-resistant coating
+                and show our commitment to adhering to stringent safety protocols.
+
+                Withstanding temperatures of up to 2000°F for two hours, FF88 offers versatility in application methods
+                and often functions as a self-priming agent, contributing to cost reduction. FF88's environmentally
+                conscious profile, marked by low VOCs and alignment with green standards, showcases its adaptability
+                across a range of substrates in construction and transportation. These coatings come with a two-hour
+                fire rating that enhances their versatility and suitability for external use, with the Firefree Exterior
+                Topcoat ("FfE") broadening their application scope across diverse environments.
+            </p>
+            <h3 style="text-align: center;">Download Our Ff88 Manuals</h3>
             <div class="row boxes">
-                <div class="col-md-3 box-1">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+
+                <div class="col-md-3 col-sm-12 box-1 content-details">
+                    <a href="./asset/pdf/product-data-sheet.pdf" class="box  box-link" target="_blank">Ff88 Product
+                        Data
+                        Sheet <img src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;"
+                            alt="" srcset=""></a>
                 </div>
-                <div class="col-md-3 box-2">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+                <div class="col-md-3 col-sm-12 box-2 content-details">
+                    <a href="./asset/pdf/Ff88 Safety Data Sheet.pdf" class="box  box-link" target="_blank">Ff88 Safety
+                        Data
+                        Sheet <img src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;"
+                            alt="" srcset=""></a>
                 </div>
-                <div class="col-md-3 box-3">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+                <div class="col-md-3 col-sm-12 box-3 content-details">
+                    <a href="./asset/pdf/Ff88 Terms and Conditions.pdf" class="box  box-link" target="_blank">Ff88
+                        Terms and
+                        Conditions <img src="./asset/download-pdf.png"
+                            style="height: 30px; width: 30px; margin-left: 10px;" alt="" srcset=""></a>
                 </div>
-                <div class="col-md-3 box-4">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+                <div class="col-md-3 col-sm-12 box-4 content-details">
+                    <a href="./asset/pdf/Surfactant Leaching.pdf" class="box  box-link" target="_blank">Surfactant
+                        Leaching
+                        <img src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;" alt=""
+                            srcset=""></a>
                 </div>
             </div>
         </div>
@@ -344,36 +674,79 @@
         <div class="container">
             <div class="row first-section-diagonal">
                 <div class="col-md-6">
-                    <img src="./assets/image-1.png" alt="Image" class="img-fluid">
+                    <img src="./asset/image-1.png" alt="Image" class="img-fluid">
                 </div>
                 <div class="col-md-6 first-diagonal">
-                    <h3 style="margin-top: 20px;">Firefree Wildfire System</h3>
-                    <p>The Firefree Wildfire System is the first and only intumescent exterior coating system that meets
-                        all the fire and weatherization ASTM standards for application in the Wildland Urban Interface
-                        listed fire zones, as prescribed in the California Building Code Section 704A.</p>
-                    <button class="btn btn-danger para-button">Call Now</button>
+                    <h3 style="margin-top: 20px;">Firefree Class A </h3>
+                    <p>Firefree Class A, or FfA, is our high-quality flame-retardant paint. It's safe, water-based, and
+                        meets all the necessary safety standards. This paint is tested to meet ASTM E84 requirements,
+                        including the extended 30-minute test. This certification means these coatings meet the industry
+                        standard for not catching fire easily in the Wildland Urban Interface.</p>
+                    <div class="btn-group" style="gap: 10px;">
+
+                        <button style="margin-bottom: 10px;" class="btn btn-danger para-button btn-phone"><img
+                                style="height: 23px; width: 23px;" src="./asset/phone-call.png" alt="" srcset=""> <a
+                                href="tel:1-888-990-3388" style="color: white;">1-888-990-3388</a></button>
+                        <button style="margin-bottom: 10px;" class="btn btn-danger para-button get-quote-btn"><a href="#form_box">Get
+                                a free
+                                quote</a></button>
+                        <button style="margin-bottom: 10px;" class="btn btn-danger para-button mobile-btn"><a
+                                href="#form_box_mobile">Get
+                                a free
+                                quote</a>
+                        </button>
+                    </div>
                 </div>
             </div>
+            <p class="full-para">Compliant with all ASTM E-84 requirements, including the 30-Minute Extended test, these
+                coatings represent a high-quality, nonflammable, non-toxic, thin-film intumescent flame-retardant paint.
+                This flame-retardant paint, inspected by the ICC (International Code Council), is easy to use, featuring
+                a smooth architectural-grade finish and longevity. These eco-friendly coatings possess low VOCs (36gr
+                /liter) compared to regulatory limits, including those set by California state. These coatings are
+                used in residential, multifamily, commercial, and industrial projects and are applicable to various
+                combustible materials, such as OSB, Douglas fir, plywood, and wood paneling. You can easily apply
+                this low-odor coating with a sprayer, brush, or roller. This product demonstrates the absence of
+                substantial progressive combustion even when subjected to a full 30-minute test over a combustible
+                surface. This indicates that these coatings are highly usable on various flammable materials. This
+                underscores its efficacy in preserving the structural integrity of wood in fire emergencies. </p>
+            <h3 style="text-align: center;">Download Our FfA Manuals</h3>
             <div class="row boxes">
-                <div class="col-md-3 box-1">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+                <div class="col-md-3 box-1 content-details">
+                    <a href="./asset/pdf/FfA Product Data Sheet.pdf" class="box  box-link" target="_blank">FfA
+                        Product
+                        Data
+                        Sheet <img src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;"
+                            alt="" srcset=""></a>
                 </div>
-                <div class="col-md-3 box-2">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+                <div class="col-md-3 box-2 content-details">
+                    <a href="./asset/pdf/FfA Safety Data Sheet.pdf" class="box  box-link" target="_blank">FfA
+                        Safety
+                        Data
+                        Sheet <img src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;"
+                            alt="" srcset=""></a>
                 </div>
-                <div class="col-md-3 box-3">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+                <div class="col-md-3 box-3 content-details">
+                    <a href="./asset/pdf/FfA Terms and Conditions.pdf" class="box  box-link" target="_blank">FfA Terms
+                        and
+                        Conditions <img src="./asset/download-pdf.png"
+                            style="height: 30px; width: 30px; margin-left: 10px;" alt="" srcset=""></a>
                 </div>
-                <div class="col-md-3 box-4">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+                <div class="col-md-3 box-4 content-details">
+                    <a href="./asset/pdf/FfA Brochure.pdf" class="box  box-link" target="_blank">FfA Brochure
+                        <img src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;" alt=""
+                            srcset=""></a>
+                </div>
+                <div class="col-md-3 box-4 content-details">
+                    <a href="./asset/pdf/Surfactant Leaching-1.pdf" class="box  box-link" target="_blank">Surfactant
+                        Leaching
+                        <img src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;" alt=""
+                            srcset=""></a>
+                </div>
+                <div class="col-md-3 box-4 content-details">
+                    <a href="./asset/pdf/Ff88 Application Instructions.pdf" class="box  box-link" target="_blank">Ff88
+                        Application
+                        Instructions <img src="./asset/download-pdf.png"
+                            style="height: 30px; width: 30px; margin-left: 10px;" alt="" srcset=""></a>
                 </div>
             </div>
         </div>
@@ -386,35 +759,89 @@
             <div class="row first-section-diagonal">
                 <div class="col-md-6 first-diagonal">
                     <h3>Firefree Wildfire System</h3>
-                    <p>The Firefree Wildfire System is the first and only intumescent exterior coating system that meets
-                        all the fire and weatherization ASTM standards for application in the Wildland Urban Interface
-                        listed fire zones, as prescribed in the California Building Code Section 704A.</p>
-                    <button style="margin-bottom: 10px;" class="btn btn-danger para-button">Call Now</button>
+                    <p>The Firefree Wildfire System, the first and only intumescent coating, complies with ASTM E2768
+                        and ASTM E84 standards for ignition resistance and application in Wildland-Urban Interface (WUI)
+                        fire zones. The system undergoes rigorous ASTM D2898 method B testing for weatherization,
+                        proving its resilience to water and UV exposures, making it suitable for exterior use.</p>
+                    <div class="btn-group" style="gap: 10px;">
+
+                        <button style="margin-bottom: 10px;" class="btn btn-danger para-button btn-phone"><img
+                                style="height: 23px; width: 23px;" src="./asset/phone-call.png" alt="" srcset=""> <a
+                                href="tel:1-888-990-3388" style="color: white;">1-888-990-3388</a></button>
+                        <button style="margin-bottom: 10px;" class="btn btn-danger para-button get-quote-btn"><a href="#form_box">Get
+                                a free
+                                quote</a>
+                        </button>
+                        <button style="margin-bottom: 10px;" class="btn btn-danger para-button mobile-btn"><a
+                                href="#form_box_mobile">Get
+                                a free
+                                quote</a>
+                        </button>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="./assets/image-1.png" alt="Image" class="img-fluid">
+                    <img src="./asset/image-1.png" alt="Image" class="img-fluid">
                 </div>
             </div>
+            <p class="full-para">The Firefree Wildfire System underwent testing to adhere to the California Building
+                Code (CBC), specifically SFM 12-7A-3 conditions, as outlined in ASTM E 2957. This evaluation focused on
+                the system's fire resistance against wildfire flame penetration for elements like soffits, eaves, and
+                ignition-resistant materials in various assembly projections, including deck structures, cantilevers,
+                and more. It effectively slows horizontal flame spread & smoke development, meeting
+                fire-retardant-treated lumber criteria. This nontoxic coating also meets fire and weatherization
+                standards that assist insurance availability and rates.
+
+                Moreover, the Firefree System comprises two coatings: Firefree Class A for ignition resistance and
+                Firefree Exterior topcoat for long-term weather protection, eliminating the need for annual
+                reapplication. Meeting ASTM WUI fire standards, the system passes both fire and weatherization tests,
+                confirmed by CalFire Accredited Fire Test Laboratories & IAS, with ICC-ES listing. It provides a
+                high-quality exterior finish with stain-resistant prime and a durable white satin finish, customizable
+                for color and finish.
+            </p>
             <div class="row boxes">
-                <div class="col-md-3 box-1">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+                <div class="col-md-3 box-1 content-details">
+                    <a href="./asset/pdf/FfA_PDS_02-03-2023.pdf" class="box  box-link" target="_blank">FfA Product Data
+                        Sheet <img src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;"
+                            alt="" srcset=""></a>
                 </div>
-                <div class="col-md-3 box-2">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+                <div class="col-md-3 box-2 content-details">
+                    <a href="./asset/pdf/FfE_PDS_02-03-2023.pdf" class="box  box-link" target="_blank">FfE Product Data
+                        Sheet
+                        <img src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;" alt=""
+                            srcset="">
+                    </a>
                 </div>
-                <div class="col-md-3 box-3">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+                <div class="col-md-3 box-3 content-details">
+                    <a href="./asset/pdf/FfA_APP_02-03-2023.pdf" class="box  box-link" target="_blank">FfA Application
+                        Instructions <img src="./asset/download-pdf.png"
+                            style="height: 30px; width: 30px; margin-left: 10px;" alt="" srcset=""></a>
                 </div>
-                <div class="col-md-3 box-4">
-                    <a href="#" class="box  box-link" data-toggle="modal" data-target="#myModal">This is a sample
-                        paragraph. You can add some details or
-                        information here.</a>
+                <div class="col-md-3 box-4 content-details">
+                    <a href="./asset/pdf/FfE_APP_02-03-2023.pdf" class="box  box-link" target="_blank">FfE Application
+                        Instructions <img src="./asset/download-pdf.png"
+                            style="height: 30px; width: 30px; margin-left: 10px;" alt="" srcset=""></a>
+                </div>
+                <div class="col-md-3 box-4 content-details">
+                    <a href="./asset/pdf/FFASDS_v03_01-2023.pdf" class="box  box-link" target="_blank">FfA Safety Data
+                        Sheet <img src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;"
+                            alt="" srcset=""></a>
+                </div>
+                <div class="col-md-3 box-4 content-details">
+                    <a href="./asset/pdf/FFESDS_v02_ 01-2023.pdf" class="box  box-link" target="_blank">FfE Safety Data
+                        Sheet <img src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;"
+                            alt="" srcset=""></a>
+                </div>
+                <div class="col-md-3 box-4 content-details">
+                    <a href="./asset/pdf/FFABrochure.pdf" class="box  box-link" target="_blank">FfA Brochure <img
+                            src="./asset/download-pdf.png" style="height: 30px; width: 30px; margin-left: 10px;" alt=""
+                            srcset=""></a>
+                </div>
+                <div class="col-md-3 box-4 content-details">
+                    <a href="./asset/pdf/MasterT&CWildfiresWebFRB12-02-2021.pdf" class="box  box-link"
+                        target="_blank">Exterior Systems
+                        Terms
+                        and Conditions <img src="./asset/download-pdf.png"
+                            style="height: 30px; width: 30px; margin-left: 10px;" alt="" srcset=""></a>
                 </div>
             </div>
         </div>
@@ -424,40 +851,40 @@
     <!-- firefree product features section start-->
     <div class="container">
         <div class="row product-feature-section">
-            <div class="col-md-2 image-col">
+            <div class="image-col">
                 <div class="image-text-1">
-                    <img src="./assets/logo-1.webp" class="img-fluid" alt="Image 1">
-                    <p>Image 1 Text</p>
+                    <img src="./asset/logo-1.webp" class="img-fluid" alt="Image 1">
+                    <p>ASTM Certified </p>
                 </div>
             </div>
-            <div class="col-md-2 image-col">
+            <div class="image-col">
                 <div class="image-text-1">
-                    <img src="./assets/logo-1.webp" class="img-fluid" alt="Image 2">
-                    <p>Image 2 Text</p>
+                    <img src="./asset/logo-1.webp" class="img-fluid" alt="Image 2">
+                    <p>LEED Compliant</p>
                 </div>
             </div>
-            <div class="col-md-2 image-col">
+            <div class="image-col">
                 <div class="image-text-1">
-                    <img src="./assets/logo-3.webp" class="img-fluid" alt="Image 3">
-                    <p>Image 3 Text</p>
+                    <img src="./asset/logo-3.webp" class="img-fluid" alt="Image 3">
+                    <p>HIGH PERFORMANCE</p>
                 </div>
             </div>
-            <div class="col-md-2 image-col">
+            <div class="image-col">
                 <div class="image-text-1">
-                    <img src="./assets/logo-4.webp" class="img-fluid" alt="Image 4">
-                    <p>Image 4 Text</p>
+                    <img src="./asset/logo-4.webp" class="img-fluid" alt="Image 4">
+                    <p>Fully Tested</p>
                 </div>
             </div>
-            <div class="col-md-2 image-col">
+            <div class="image-col">
                 <div class="image-text-1">
-                    <img src="./assets/logo-5.webp" class="img-fluid" alt="Image 5">
-                    <p>Image 5 Text</p>
+                    <img src="./asset/logo-5.webp" class="img-fluid" alt="Image 5">
+                    <p>Easy to Use & Apply</p>
                 </div>
             </div>
-            <div class="col-md-2 image-col">
+            <div class="image-col">
                 <div class="image-text-1">
-                    <img src="./assets/logo-5.webp" class="img-fluid" alt="Image 6">
-                    <p>Image 6 Text</p>
+                    <img src="./asset/logo-5.webp" class="img-fluid" alt="Image 6">
+                    <p>Low VOCs</p>
                 </div>
             </div>
         </div>
@@ -470,59 +897,23 @@
             <div class="row contact-section" style="padding: 20px; color: white;">
                 <div class="col-md-8">
                     <div class="left-content">
-                        <h4>CONTACT FIREFREE AND ORDER TODAY</h4>
-                        <p>For ordering or information regarding our Fire Resistant, Fire Retardant Products call us at
-                            1-888-990-3388</p>
+                        <h4>Contact Firefree Coatings & Order Today!</h4>
+                        <p>Call us for superior protection against fire hazards. Secure your order today and prioritize
+                            safety with cutting-edge solutions.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="right-content">
                         <button type="button" class="btn"
-                            style="background-color: #CD2122; color: white; border: 3px solid white;">how to
-                            order</button>
+                            style="background-color: #CD2122; color: white; border: 3px solid white;"><a
+                                href="tel:+18889903388">Call Us</a></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- contact section end -->
-    <div class="modal fade" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
 
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Please Fill out the form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!-- Modal Body -->
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" class="form-control" id="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="mobile">Mobile Number:</label>
-                            <input type="tel" class="form-control" id="mobile">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" rows="3" placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
     <footer class="container-fluid">
         <div class="container">
             <div class="row">
@@ -541,8 +932,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
+<!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+<!-- <script>
     function emailSend() {
 
         var userName = document.getElementById('name').value;
@@ -559,7 +950,7 @@
             Host: "smtp.elasticemail.com",
             Username: "udayveerus348566@gmail.com",
             Password: "9D5F0B8DBEC2B30BB2C6F3BB86E87F69773A",
-            To: 'udayveer@rankingeek.com',
+            To: 'sharad@rankingeek.com',
             From: "udayveerus348566@gmail.com",
             Subject: "This is the subject",
             Body: messageBody
@@ -574,6 +965,7 @@
             }
         );
     }
-</script>
+
+</script> -->
 
 </html>
