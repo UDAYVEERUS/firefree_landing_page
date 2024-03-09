@@ -1,7 +1,7 @@
 <?php 
 
 
-$to = 'sharad@rankingeek.com';
+$to = 'udayveerus348566@gmail.com';
 
 
 $subject = "!! New Lead Received !!";
@@ -42,6 +42,6 @@ $headers .= "From:" . $senderEmail . "\r\n";
 
 
 mail($to,$subject,$message,$headers);
- header('Location: index.html'); 
+ header('Location: thank-you.html'); 
     // echo("Mail sent Successfullly. Go back to your Landing Page");
 ?>  
